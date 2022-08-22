@@ -1,66 +1,8 @@
 @import "vars";
 @import "fonts";
+@import "global";
 
-html{
-    box-sizing: border-box;
-}
 
-*,*::after,*::before{
-    box-sizing:inherit;
-}
-
-h1,h2,h3,h4,h5,h6{
-    margin:0;
-}
-
-ul,li{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-button{
-    padding: 0;
-    cursor: pointer;
-}
-
-p{
-    margin: 0;
-}
-
-body{
-    min-width:320px;
-    overflow-x: hidden;
-    font-family: "Roboto-Regular", "Arial", "sans-serif";
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-
-}
-
-.container{
-    padding: 0 20px;
-}
-@media(min-width: 640px){
-    .container{
-        padding: 0 30px;
-    }
-}
-@media(min-width: 768px){
-    .container{
-        padding: 0 40px;
-    }
-}
-@media(min-width: 1024px){
-    .container{
-        padding: 0 50px;
-    }
-}
-@media(min-width: 1440px){
-    .container{
-        padding: 0 60px;
-    }
-}
 
 .header{
     background-color:$accent ;
@@ -361,4 +303,255 @@ body{
     }
 }
 
+.services{
+    text-align: center;
+    padding: 25px 0 40px;
+    
+    &_title{
+        margin-bottom: 47px;
+        color:$accent;
 
+    }
+    &_descr{
+        line-height: 24px;
+        font-size: 20px;   
+        color: $text-color;
+        margin-bottom: 21px;
+    }
+    &_text{
+        color: #797979;
+        margin-bottom: 40px;
+        line-height: 17px;
+        font-size: 15px;
+    }
+    &_item{
+        min-height: 307px;
+        border:1px solid $bg-color;
+        border-bottom: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px ;
+        &:last-child{
+            border-bottom:1px solid $bg-color;
+        }
+        &:hover{
+            .services_item-text,
+            .services_item-link{
+                display: block;
+            }
+            .services_item-img{
+                margin-bottom: 14px;
+            }
+            .services_item-title{
+                margin-bottom: 33px;
+            }
+            .services_item-inner{
+                border:4px solid $accent;
+                margin: 0;   
+                min-height: 277px;
+            }
+        }
+    }
+    &_item-inner{
+        padding: 36px 25px 24px;
+    }
+    &_item-img{
+        margin-bottom: 30px;
+    }
+    &_item-title{
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2px;
+        color:$text-color;
+        @extend %robotocondensed-700;
+        margin: auto;
+    }
+    &_item-text{
+        display: none;
+        @extend %dosis-400;
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 22px;
+    }
+    &_item-link{
+        display: none;
+        color:$accent;
+        @extend %robotocondensed-700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    
+}
+
+@media(min-width: 640px){
+    .services{
+        padding: 25px 0 0;
+        
+        &_title{
+            margin-bottom: 20px;
+            padding-bottom: 0;
+            &::after{
+                display: none;
+            }    
+        }
+        &_descr{
+            font-size: 24px;   
+            padding-bottom: 41px;
+            margin-bottom: 30px;
+            position: relative;
+            &::after{
+                content:"";
+                width: 100px;
+                height: 8px;
+                background-color: $accent;
+                position: absolute  ;
+                bottom: 0;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+            }
+        }
+        &_text{
+            line-height: 24px;
+            font-size: 18px;
+        }
+        &_items{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -30px;
+        }
+        &_item{
+            &:nth-child(even){
+                border-left: none;
+            }
+            width: 50%;            
+            &:last-child{
+                border-bottom:none;
+            }            
+        }
+        &_item-inner{
+            padding: 39px 45px 25px;
+        }                      
+    }   
+}
+
+@media(min-width: 768px){
+    .services{
+        padding: 50px 0 0;
+        &_title{
+            margin-bottom: 30px;             
+        }
+        &_descr{ 
+            text-align: left;
+            &::after{                
+                margin-left: 0;               
+            }
+        }
+        &_text{
+            margin-bottom: 27px;
+            text-align: left;
+        }
+        &_items{
+            margin: 0 -40px;
+        }
+        &_item{
+            min-height: 334px;
+            &:hover{
+                .services_item-inner{
+                    min-height: 304px;                    
+                }                
+            }          
+        } 
+        &_item-inner{
+            padding: 39px 67px 31px;
+        }              
+    }   
+}
+
+@media(min-width: 1024px){
+    .services{
+        padding: 52px 0 0;
+        &_title{
+            margin-bottom: 60px;             
+        }
+        &_descr{ 
+           padding-bottom: 46px;
+           margin-bottom: 34px;
+        }
+        &_text{
+            margin-bottom: 32px;
+            max-width: 608px;
+        }
+        &_items{
+            margin: 0 -50px;
+        }
+        &_item{
+            width: 25%;
+            min-height: 270px;
+            &:nth-child(2),
+            &:nth-child(6){
+                border-right: none;
+            }
+            &:hover{ 
+                .services_item-inner{
+                    min-height: 255px;
+                }                
+            }             
+        }&_item-inner{
+            padding: 21px 13px 16px;
+        }              
+    }   
+}
+
+@media(min-width: 1440px){
+    .services{
+        padding: 0;
+        &_inner{
+            margin: 0 -60px ;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &_head{
+            padding-left: 62px;
+        }
+        &_title{
+            text-align: left;
+            margin-top: 94px;
+            margin-bottom: 64px;             
+        }
+        &_descr{ 
+           padding-bottom: 38px;
+           margin-bottom: 34px;
+           max-width: 400px;
+        }
+        &_text{
+            margin-bottom: 134px;
+            max-width: 351px;
+        }
+        &_items{
+            margin: 0 ;
+            width: 64%;
+        }
+        &_item{
+            padding: 10px;
+            width:25%;
+            min-height: 277px;
+            &:nth-child(2),
+            &:nth-child(6){
+                border-right: none;
+            }
+            &:hover{ 
+                .services_item-inner{
+                    min-height: 255px;
+                }                
+            }             
+        }&_item-inner{
+            padding: 21px 13px 16px;
+        }              
+    }   
+}
