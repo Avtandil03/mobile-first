@@ -611,7 +611,9 @@ body {
 }
 .services_item:hover .services_item-text,
 .services_item:hover .services_item-link {
-  display: block;
+  opacity: 1;
+  height: auto;
+  overflow: visible;
 }
 .services_item:hover .services_item-img {
   margin-bottom: 14px;
@@ -626,6 +628,7 @@ body {
 }
 .services_item-inner {
   padding: 36px 25px 24px;
+  transition: all 0.3s;
 }
 .services_item-img {
   margin-bottom: 30px;
@@ -637,14 +640,18 @@ body {
   color: #4a4a4a;
   margin: auto;
 }
+.services_item-text, .services_item-link {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
 .services_item-text {
-  display: none;
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 22px;
 }
 .services_item-link {
-  display: none;
   color: #2B4074;
   font-size: 16px;
   line-height: 19px;
@@ -809,4 +816,24 @@ body {
   .services_item-inner {
     padding: 21px 13px 16px;
   }
+}
+.project {
+  text-align: center;
+  padding: 20px 0 40px;
+  background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%);
+}
+.project_title {
+  color: #fff;
+  margin-bottom: 40px;
+}
+.project_title::after {
+  background-color: #fff;
+}
+.project_item-img {
+  min-height: 255px;
+  border-radius: 4px;
+}
+.project_item-link {
+  display: block;
+  padding: 20px 0;
 }/*# sourceMappingURL=style.css.map */
