@@ -924,3 +924,27 @@
         }
     }
 }
+
+.news{
+    text-align: center;
+    background-color:$bg-color;
+    padding: 40px 0;
+    &_title{
+        margin-bottom: 40px;
+        color:$text-color;
+    }
+    &_item-img{
+        width: 270px;
+        height: 443px;
+        border-radius:4px;
+        margin-bottom: 21px;
+    }
+    &_item-info{
+        margin: auto;
+    }
+    &_item-title{
+        background-color:#fff;
+        bottom:0;
+    }
+
+}

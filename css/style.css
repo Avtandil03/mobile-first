@@ -1051,4 +1051,26 @@ body {
     margin-bottom: 39px;
     width: 553px;
   }
+}
+.news {
+  text-align: center;
+  background-color: #F9F6E5;
+  padding: 40px 0;
+}
+.news_title {
+  margin-bottom: 40px;
+  color: #4a4a4a;
+}
+.news_item-img {
+  width: 270px;
+  height: 443px;
+  border-radius: 4px;
+  margin-bottom: 21px;
+}
+.news_item-info {
+  margin: auto;
+}
+.news_item-title {
+  background-color: #fff;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */
