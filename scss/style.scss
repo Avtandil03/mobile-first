@@ -943,6 +943,18 @@
         background-size: no-repeat;
         background-position: center;
         background-size: cover;
+        
+        &:hover{
+            border:10px solid $accent;            
+            .news_item-info{
+                display: block;
+            }
+            .news_item-title{
+                margin:0 0 20px -10px;
+                background-color:$accent;
+                color:$bg-color; 
+            }
+        }
     }
     &_item-info{
         position: absolute;
@@ -954,7 +966,7 @@
         position: absolute;
         background-color:#fff;
         display: block;
-        width: 100%;
+        width: 270px;
         height: 40px;
         padding: 8px 0 0 20px;
         text-align: left;

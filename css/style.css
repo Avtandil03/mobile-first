@@ -1072,6 +1072,17 @@ body {
   background-position: center;
   background-size: cover;
 }
+.news_item-img:hover {
+  border: 10px solid #2B4074;
+}
+.news_item-img:hover .news_item-info {
+  display: block;
+}
+.news_item-img:hover .news_item-title {
+  margin: 0 0 20px -10px;
+  background-color: #2B4074;
+  color: #F9F6E5;
+}
 .news_item-info {
   position: absolute;
   display: none;
@@ -1082,7 +1093,7 @@ body {
   position: absolute;
   background-color: #fff;
   display: block;
-  width: 100%;
+  width: 270px;
   height: 40px;
   padding: 8px 0 0 20px;
   text-align: left;
