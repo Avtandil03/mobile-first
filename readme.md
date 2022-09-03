@@ -1,3 +1,3 @@
-#Git and GitHub course
+#mobile-first
 
-Crash course for Git
+https://avtandil03.github.io/electric/
