@@ -1061,7 +1061,7 @@ body {
   margin-bottom: 40px;
   color: #4a4a4a;
 }
-.news_item-inner {
+.news_inner {
   display: flex;
   justify-content: center;
 }
